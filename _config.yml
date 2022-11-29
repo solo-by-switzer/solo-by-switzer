@@ -1,7 +1,6 @@
-title: "Allan Switzer"
+title: "Solo by Allan Switzer"
 baseurl: ""
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
+url: ""
 permalink: "/:categories/:year/:month/:day/:title:output_ext"
 
 # Build settings

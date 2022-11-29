@@ -1,9 +1,55 @@
 ---
 layout: default
-title: Home
-head-title: ""
-order: 1
-tag:
+
 ---
 
-{{ page.title }}
+<article>
+
+  <div>
+    <p>
+      Allan Switzer, a multidisciplinary artist and designer, began his career with the family design and manufacturing business William Switzer and Associates in 1968.
+    </p>
+    <p>
+      Allan was sent to the prestigious English firm Titchmarsh & Goodwin in Ipswich, Suffolk, England. Allan learned how to select timbers and the various processes to create T & G exceptional oak reproduction furniture. In 1970 he travelled to
+      Sonseca, Spain to supervise the creation of the first William Switzer factory, producing the Allan Zachary Pine Collection. Allan created and styled the Lucien Rollin Collection for the William Switzer company and subsequently, under the
+      supervision of Madeline Arbus and Nathalie and Patrick Aubriot, the Andre Arbus Collection. The Arbus Collection won Robb Report's Best of the Best in Furniture Design in 2006.
+    </p>
+    <p>
+      Involved in both fine art and fine art furniture, Allan has taken a leading role in the national and international design community. Since leaving the William Switzer group of companies in 2012, Allan has embarked on designing and producing his
+      benchmade SOLO collection in Vancouver, Canada.
+    </p>
+    <p>
+      Allan's non-furniture art portfolio is accessable at <a href="allanswitzer.com">AllanSwitzer.com</a>.
+    </p>
+    <p>
+      An Artistcloseup interview with Allan is accessible <a href="artistcloseup.com/blog/interview-allan-switzer" target="_blank">here</a>.
+    </p>
+  </div>
+
+  <aside>
+
+  </aside>
+
+</article>
+
+<section class="main-gallery">
+
+ {% assign posts = site.posts %}
+
+  {% for post in posts %}
+
+  <a class="gallery-listing" href="{{ post.url }}">
+
+     {% for image in post.images limit: 1 %}
+
+     <img alt="© Allan Switzer" src="{{ image | relative_url }}"/>
+
+     {% endfor %}
+
+     <h2>{{ post.title }}</h2>
+
+  </a>
+
+  {% endfor %}
+
+</section>
