@@ -1,7 +1,10 @@
 ---
 layout: default
+nav_target: "#main-gallery"
 
 ---
+
+<main class="catalogue">
 
 <article>
 
@@ -27,29 +30,31 @@ layout: default
   </div>
 
   <aside>
-
+    <img alt="© Allan Switzer" src="/images/studio.jpg">
   </aside>
 
 </article>
 
-<section class="main-gallery">
+<section id="main-gallery">
 
- {% assign posts = site.posts %}
+ {% assign products = site.products %}
 
-  {% for post in posts %}
+  {% for product in products %}
 
-  <a class="gallery-listing" href="{{ post.url }}">
+  <a href="{{ product.url }}">
 
-     {% for image in post.images limit: 1 %}
+     {% for image in product.images limit: 1 %}
 
-     <img alt="© Allan Switzer" src="{{ image | relative_url }}"/>
+     <img alt="{{ product.title }} &#8212; © Allan Switzer" src="{{ image | relative_url }}"/>
 
      {% endfor %}
 
-     <h2>{{ post.title }}</h2>
+     <h2>{{ product.title }}</h2>
 
   </a>
 
   {% endfor %}
 
 </section>
+
+</main>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <main class="product">
+
+    <article>
+
+      <div>
+        <hgroup>
+          <h3>SOLO #{{ page.number }}:</h3>
+          <h1>{{ page.title }}</h1>
+        </hgroup>
+
+        <p>{{ page.description }}</p>
+
+        <table class="{{ page.table_expanded }}">
+          <tbody>
+            {% for dimension in page.dimensions %}
+            <tr>
+              <td>{{ dimension.dimension }}:</td>
+              <td>{{ dimension.value }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                <a href="{{ page.tearsheet }}" target="blank">View Tearsheet in new tab.</a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <aside>
+        {% for image in page.images limit: 1 %}
+        <img alt="{{ page.title }} &#8212; © Allan Switzer" src="{{ image | relative_url }}"/>
+        {% endfor %}
+      </aside>
+
+    </article>
+
+    <section>
+
+      {% for image in page.images offset:1 %}
+
+      <img
+      alt="{{ page.title }}  &#8212; © Allan Switzer"
+      src="{{ image | relative_url }}" />
+
+      {% endfor %}
+
+    </section>
+
+  </main>
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+</body>
+
+</html>

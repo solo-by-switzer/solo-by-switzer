@@ -1,0 +1,37 @@
+---
+layout: products
+
+nav_target: "/index.html"
+
+number: 3
+
+title: 'The Maritime Lounge Chair'
+
+description: '[DESCRIPTION]'
+
+dimensions:
+- dimension:    Width
+  value:          35″
+- dimension:    Depth
+  value:          38″
+- dimension:    Height
+  value:          38″
+- dimension:    Seat Height
+  value:          18.5″
+- dimension:    Seat Depth
+  value:          23″
+- dimension:    Arm Height
+  value:          25″
+- dimension:    Com
+  value:          7 yds
+- dimension:    Col
+  value:          125 sqft
+
+images:
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+
+tearsheet:
+- "/tearsheets/test.pdf"
+---

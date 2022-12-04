@@ -1,0 +1,35 @@
+---
+layout: products
+
+nav_target: "/index.html"
+
+number: 9A
+
+title: 'The Point Grey Dining Armchair'
+
+description: '[DESCRIPTION]'
+
+dimensions:
+- dimension:    Width
+  value:          24.5″
+- dimension:    Depth
+  value:          26.5″
+- dimension:    Height
+  value:          33″
+- dimension:    Seat Height
+  value:          19.5″
+- dimension:    Arm Height
+  value:          26″
+- dimension:    Com
+  value:          4 yds
+- dimension:    Col
+  value:          72 sqft
+
+images:
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+
+tearsheet:
+- "/tearsheets/test.pdf"
+---

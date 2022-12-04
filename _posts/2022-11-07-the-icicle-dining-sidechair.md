@@ -1,0 +1,35 @@
+---
+layout: products
+
+nav_target: "/index.html"
+
+number: 7
+
+title: 'The Icicle Dining Sidechair'
+
+description: '[DESCRIPTION]'
+
+dimensions:
+- dimension:    Width
+  value:          20″
+- dimension:    Depth
+  value:          28″
+- dimension:    Height
+  value:          38″
+- dimension:    Seat Height
+  value:          19.5″
+- dimension:    Seat Depth
+  value:          28″
+- dimension:    Com
+  value:          3 yds
+- dimension:    Col
+  value:          54 sqft
+
+images:
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+- "/images/placeholder.jpg"
+
+tearsheet:
+- "/tearsheets/test.pdf"
+---

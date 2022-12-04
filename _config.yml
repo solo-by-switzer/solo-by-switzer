@@ -1,7 +1,11 @@
 title: "Solo by Allan Switzer"
 baseurl: ""
 url: ""
-permalink: "/:categories/:year/:month/:day/:title:output_ext"
+permalink: /:title/
+collections:
+  products:
+    output: true
+    sort_by: number
 
 # Build settings
 theme: minima
