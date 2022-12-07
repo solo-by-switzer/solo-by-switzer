@@ -311,11 +311,6 @@ img {
   background-color: var(--LightAccentColor);
   transition-delay: filter .2s;
 
-  background-image: url(/images/placeholder.jpg);
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-
   font-size: .694rem;
   font-family: var(--SecondaryFont);
   color: blue;
