@@ -168,7 +168,7 @@ main.product   article div table tbody tr:hover {
   transition: .2s;
 }
 main.product   article div table tfoot tr:hover {
-  background-color: var(--HighlightColor);
+  background-color: var(--LightAccentColor);
 }
 main.product   article div table tbody tr td,
 main.product   article div table tfoot tr td {
