@@ -5,54 +5,65 @@ nav_target: "#main-gallery"
 
 <main class="catalogue">
 
-  <div class="logo-container">
-    <div class="logo">
-     <div><b>SOLO</b><small>&copy;</small></div>
-     <sub>by Allan Switzer</sub>
+  <section>
+
+    <div class="logo-container">
+      <div class="logo">
+      <div><b>SOLO</b><small>&copy;</small></div>
+      <sub>by Allan Switzer</sub>
+      </div>
     </div>
-  </div>
 
-<article>
-    <p>
-      Allan Switzer, a multidisciplinary artist and designer, began his career with the family design and manufacturing business William Switzer and Associates in 1968.
-    </p>
-    <p>
-      Allan was sent to the prestigious English firm Titchmarsh & Goodwin in Ipswich, Suffolk, England. Allan learned how to select timbers and the various processes to create T & G exceptional oak reproduction furniture. In 1970 he travelled to
-      Sonseca, Spain to supervise the creation of the first William Switzer factory, producing the Allan Zachary Pine Collection. Allan created and styled the Lucien Rollin Collection for the William Switzer company and subsequently, under the
-      supervision of Madeline Arbus and Nathalie and Patrick Aubriot, the Andre Arbus Collection. The Arbus Collection won Robb Report's Best of the Best in Furniture Design in 2006.
-    </p>
-    <p>
-      Involved in both fine art and fine art furniture, Allan has taken a leading role in the national and international design community. Since leaving the William Switzer group of companies in 2012, Allan has embarked on designing and producing his
-      benchmade SOLO collection in Vancouver, Canada.
-    </p>
-    <p>
-      Allan's non-furniture art portfolio is accessable at <a href="https://www.allanswitzer.com" target="_blank" rel="noopener">AllanSwitzer.com</a>.
-      An Artistcloseup interview with Allan is accessible <a href="https://www.artistcloseup.com/blog/interview-allan-switzer" target="_blank" rel="noopener">here</a>.
-    </p>
-</article>
+    <aside>
+      <img src="/images/allan.png">
+      <img src="/images/the-hycroft-lounge-chair-1.jpg">
+      <img src="/images/the-jericho-chair-2.jpg">
+    </aside>
+
+    <article>
+      <p>
+        Allan Switzer, a multidisciplinary artist and designer, began his career with the family design and manufacturing business William Switzer and Associates in 1968.
+      </p>
+      <p>
+        Allan was sent to the prestigious English firm Titchmarsh & Goodwin in Ipswich, Suffolk, England. Allan learned how to select timbers and the various processes to create T & G exceptional oak reproduction furniture. In 1970 he travelled to
+        Sonseca, Spain to supervise the creation of the first William Switzer factory, producing the Allan Zachary Pine Collection. Allan created and styled the Lucien Rollin Collection for the William Switzer company and subsequently, under the
+        supervision of Madeline Arbus and Nathalie and Patrick Aubriot, the Andre Arbus Collection. The Arbus Collection won Robb Report's Best of the Best in Furniture Design in 2006.
+      </p>
+      <p>
+        Involved in both fine art and fine art furniture, Allan has taken a leading role in the national and international design community. Since leaving the William Switzer group of companies in 2012, Allan has embarked on designing and producing his
+        benchmade SOLO collection in Vancouver, Canada.
+      </p>
+      <p>
+        Allan's non-furniture art portfolio is accessable at <a href="https://www.allanswitzer.com" target="_blank" rel="noopener">AllanSwitzer.com</a>.
+        An Artistcloseup interview with Allan is accessible <a href="https://www.artistcloseup.com/blog/interview-allan-switzer" target="_blank" rel="noopener">here</a>.
+      </p>
+    </article>
+
+  </section>
 
 
+  <ol  id="main-gallery">
+  
+    {% assign products = site.products %}
 
-<section id="main-gallery">
+    {% for product in products %}
+  
+    <li>
+      <a href="{{ product.url }}">
+  
+       {% for image in product.images limit: 1 %}
+  
+       <img alt="{{ product.title }} &#8212; © Allan Switzer" src="{{ image | relative_url }}"/>
 
- {% assign products = site.products %}
+       <h2>{{ product.title }}</h2>
+  
+       {% endfor %}
+  
+      </a>
+    </li>
+  
+    {% endfor %}
 
-  {% for product in products %}
-
-  <a href="{{ product.url }}">
-
-     {% for image in product.images limit: 1 %}
-
-     <img alt="{{ product.title }} &#8212; © Allan Switzer" src="{{ image | relative_url }}"/>
-
-     {% endfor %}
-
-     <h2>{{ product.title }}</h2>
-
-  </a>
-
-  {% endfor %}
-
-</section>
+  </ol>
 
 </main>

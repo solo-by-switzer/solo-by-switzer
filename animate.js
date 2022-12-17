@@ -15,3 +15,22 @@ const observer = new IntersectionObserver(entries => {
 images.forEach(image => {
   observer.observe(image)
 })
+
+
+
+
+
+
+var aside = document.querySelector("aside");
+var carouselImages = aside.querySelectorAll("img");
+var currentImageIndex = 0;
+var interval = 4000;
+
+function nextImage() {
+  currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+  for (var i = 0; i < carouselImages.length; i++) {
+    carouselImages[i].style.display = "none";
+  }
+  carouselImages[currentImageIndex].style.display = "block";
+}
+setInterval(nextImage, interval);

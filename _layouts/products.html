@@ -47,17 +47,19 @@
 
     </article>
 
-    <section>
+    <ol>
 
       {% for image in page.images offset:1 %}
 
+      <li>
       <img
       alt="{{ page.title }}  &#8212; © Allan Switzer"
       src="{{ image | relative_url }}" />
+      </li>
 
       {% endfor %}
 
-    </section>
+    </ol>
 
   </main>
 

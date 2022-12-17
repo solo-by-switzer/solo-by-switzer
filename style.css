@@ -45,7 +45,7 @@ body {
 }
 
 header nav {
-  margin: 2rem 0 1.5rem 0;
+  margin: 1.5rem 0 1rem 0;
   height: 1rem;
   display: flex;
   justify-content: space-between;
@@ -63,29 +63,36 @@ header nav a:hover {
 
 main {
   flex-grow: 1;
-  padding-top: 2rem;
+}
+
+main.catalogue section {
+  min-height: calc(100vh - 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main.catalogue .logo-container {
-  margin: calc(20vh - 4.5rem) auto 20vh auto;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 main.catalogue .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  max-width: 100%;
 }
 main.catalogue .logo * {
   color: var(--AccentColor);
   font-family: var(--SecondaryFont);
 }
 main.catalogue .logo b {
-  font-size: 7.43rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.05;
   font-family: 'Nunito', sans-serif;
-  font-size: 8.916rem;
+  font-size: min(24vw, 8.916rem);
 }
 main.catalogue .logo small {
   font-family: 'Nunito', sans-serif;
@@ -99,33 +106,55 @@ main.catalogue .logo sub {
   font-size: 1.2rem;
 }
 
-
-main.catalogue article {
-  margin-bottom: 6rem;
-  column-count: 2;
-  column-gap: 2rem;
+main.catalogue aside {
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 40rem;
+  width: 100%;
+  min-height: 24.721374rem;
+  aspect-ratio: 1.618033 / 1;
+}
+main.catalogue aside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-main.catalogue section {
-  padding-top: 1.5rem;
+main.catalogue article {
+  display: inline-block;
+  column-count: 2;
+  column-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+main ol {
+  list-style-type: none;
+  width: 100%;
+  padding: 1.5rem 0 0 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  flex-grow: 1;
+  align-items: center;
 }
-main.catalogue section a {
+main li { 
   cursor: pointer;
   width: calc(33.33% - .75rem);
   height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
   margin-bottom: 1.75rem;
 }
-main.catalogue section a img {
- object-fit: cover;
- width: 100%;
- height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
+main li img {
+  object-fit: cover;
+  width: 100%;
+  height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
+}
+
+main.catalogue li {
+  margin-bottom: 2rem;
 }
 
 main.product   {
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -193,20 +222,6 @@ main.product   article aside img {
   max-width: 100%;
 }
 
-main.product   section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-main.product   section img {
-  object-fit: cover;
-  width: calc(33.33% - .75rem);
-  height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
-  margin-bottom: 1.05rem;
-}
-
 footer {
   border-top: 1px solid;
   padding: 1.2rem 0 1rem 0;
@@ -252,6 +267,7 @@ p:not(:first-child):not(:last-child) {
 
 main article p {
   text-align: justify;
+  hyphens: auto;
 }
 main.product article p {
   flex-grow: 1;
@@ -344,28 +360,37 @@ figure img {
 
 /* MOBILE */
 @media screen and (max-width: 880px) {
-  
 
-  main.catalogue article aside {
-    display: none;
-  }
-
-  main.catalogue section a {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  main.catalogue section a img {
-    width: 100%;
-    height: auto;
-  }
-
-  main.product section img {
+  main li {
     width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
   }
+
+  main li img {
+    width: 100%;
+    height: auto;
+  }
+
+  main.product   article { 
+    flex-direction: column;
+    margin-bottom: .75rem;
+  }
+
+  main.product article div {
+    width: 100%;
+  }
+
+  main.product   article aside {
+    width: 100%;
+    max-height: 100%;
+    margin-top: 1.75rem;
+  }
+  main.product   article aside img {
+    object-fit: contain;
+  }
+
+
 }
 
 @media screen and (max-width: 680px) {
@@ -383,8 +408,10 @@ figure img {
     text-decoration: underline;
   }
   main.product article div table tfoot tr {
-    border-bottom: none;
+    padding: .75rem 0 0 0;
+    border: none;
   }
+
   main.product article div table tfoot tr:hover {
     background-color: transparent;
   }
