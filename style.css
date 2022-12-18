@@ -162,7 +162,7 @@ main.product   {
   border-top: 1px solid var(--LightAccentColor);
 }
 main.product   article {
-  margin: 0 0 2.25rem 0;
+  margin: 0 0 .75rem 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -377,7 +377,7 @@ figure img {
     margin-bottom: .75rem;
   }
 
-  main.product article div {
+  main.product   article div {
     width: 100%;
   }
 
@@ -389,6 +389,12 @@ figure img {
   main.product   article aside img {
     object-fit: contain;
   }
+
+  main.product  ol {
+    padding-top: 0;
+  } 
+
+
 
 
 }
