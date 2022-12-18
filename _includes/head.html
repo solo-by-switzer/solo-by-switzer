@@ -7,8 +7,11 @@
   <link rel="canonical" href="">
 
   <!-- Primary Meta Tags -->
-  <title>Solo by Allan Switzer &#8212; {{ page.title }}</title>
-  <meta name="title" content="Solo by Allan Switzer &#8212; {{ page.title }}">
+  <title>
+  SOLO by Allan Switzer {% if page.layout == "products" %} &#8212; {{ page.title }} {% endif %}
+  </title>
+
+  <meta name="title" content="{{ page.title }}">
   <meta name="description" content="--------------">
   <meta name="keywords" content="--------------">
 
