@@ -1,0 +1,55 @@
+<script>
+
+const aside = document.querySelector("aside");
+const carouselImages = aside.querySelectorAll("img");
+let currentImageIndex = 0;
+const interval = 4000;
+
+const nextImage = () => {
+  currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+  carouselImages.forEach(image => image.style.display = "none");
+  carouselImages[currentImageIndex].style.display = "block";
+};
+setInterval(nextImage, interval);
+
+
+
+const images = document.querySelectorAll('img');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("animate", entry.intersectionRatio > 0.10);
+  });
+}, {
+  threshold: [0, 0.10, 0.9, 1]
+});
+
+images.forEach(image => {
+  observer.observe(image);
+});
+
+
+
+const productImages = document.querySelectorAll('.product img');
+
+const createLightbox = event => {
+  const lightbox = document.createElement('figure');
+  document.body.appendChild(lightbox);
+
+  const lightboxImage = document.createElement('img');
+  lightboxImage.src = event.target.src;
+  lightboxImage.setAttribute('draggable', false);
+  lightbox.appendChild(lightboxImage);
+
+  lightbox.addEventListener('click', event => {
+    document.body.removeChild(lightbox);
+  });
+};
+
+productImages.forEach(productImage => {
+  productImage.addEventListener('click', createLightbox);
+});
+
+
+
+</script>
