@@ -1,6 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Libre+Baskerville&family=Nunito:wght@800&display=swap');
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/fonts/LeagueSpartan-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('/fonts/LibreBaskerville-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-ExtraBold.ttf');
+  font-weight: 800;
+  font-style: normal;
+}
 
 /* PAGE */
 :root {
