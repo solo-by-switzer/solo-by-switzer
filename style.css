@@ -3,6 +3,7 @@
   src: url('/fonts/LeagueSpartan-Regular.ttf');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url('/fonts/LibreBaskerville-Regular.ttf');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url('/fonts/Nunito-ExtraBold.ttf');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 /* PAGE */
@@ -25,9 +28,9 @@
   --AccentColor: #51447E;
   --LightAccentColor: #F1F1F1;
   --HighlightColor: turquoise;
-  --PrimaryFont: 'Libre Baskerville', serif;
-  --SecondaryFont: 'League Spartan', Helvetica, Arial, sans-serif;
-  --LogoFont: 'Nunito', sans-serif;
+  --PrimaryFont: 'Libre Baskerville', 'Georgia', serif;
+  --SecondaryFont: 'League Spartan', 'Helvetica Neue', Arial, sans-serif;
+  --LogoFont: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
 }
 
 * {
@@ -41,15 +44,14 @@ html {
   padding: 0;
   height: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 14px;
   font-family: var(--PrimaryFont);
 }
 
 body {
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.2rem;
 
-  max-width: 82rem;
+  max-width: 72rem;
   min-height: 100%;
 
   display: flex;
@@ -66,7 +68,7 @@ header nav {
 }
 header nav a {
   font-family: var(--SecondaryFont);
-  font-size: .833rem;
+  font-size: .694rem;
   text-transform: uppercase;
   font-style: italic;
 }
@@ -79,7 +81,7 @@ main {
 }
 
 main.catalogue section {
-  min-height: calc(100vh - 3.5rem);
+  min-height: calc(100vh - 2.4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +95,7 @@ main.catalogue section div.top {
 
 main.catalogue section div.top > * {
   width: calc(50% - 1rem);
-  margin: 1.25rem 0;
+  margin: 1.2rem 0;
 }
 
 main.catalogue .logo-container {
@@ -118,19 +120,18 @@ main.catalogue .logo * {
 main.catalogue .logo b {
   font-family: var(--LogoFont);
   line-height: 1.05;
-  font-size: min(24vw, 8.916rem);
+  font-size: min(24vw, 7.43rem);
 }
 main.catalogue .logo small {
   font-family: var(--SecondaryFont);
   vertical-align: top;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.3;
 }
 main.catalogue .logo sub {
   font-family: var(--SecondaryFont);
-  font-size: 1.2rem;
-  margin-top: -.35rem;
-  font-size: 1.2rem;
+  margin-top: -.5rem;
+  font-size: 1rem;
 }
 
 main.catalogue aside {
@@ -149,14 +150,14 @@ main.catalogue aside img {
 main.catalogue article {
   display: inline-block;
   column-count: 2;
-  column-gap: 2rem;
-  margin: 1.25rem 0;
+  column-gap: 1.2rem;
+  margin: 1rem 0;
 }
 
 main ol {
   list-style-type: none;
   width: 100%;
-  padding: 1.5rem 0 0 0;
+  padding: 1rem 0 0 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -166,7 +167,7 @@ main li {
   cursor: pointer;
   width: calc(33.33% - .75rem);
   height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
 }
 main li img {
   object-fit: cover;
@@ -174,26 +175,22 @@ main li img {
   height: min(calc(.75 * 33vw - 2.25rem), 18.4375rem);
 }
 
-main.catalogue li {
-  margin-bottom: 2rem;
-}
-
 main.product   {
-  padding-top: 1.5rem;
+  padding-top: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid var(--LightAccentColor);
 }
 main.product   article {
-  margin: 0 0 .75rem 0;
+  margin: 0 0 .5rem 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
 }
 main.product   article div {
-  width: calc(50% - .75rem);
+  width: calc(50% - .6rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -208,7 +205,7 @@ main.product   article div table {
 }
 main.product   article div table tr {
   border-top: 1px solid var(--LightAccentColor);
-  height: 1.2rem;
+  height: 1.12rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -221,20 +218,19 @@ main.product   article div table tfoot tr:hover {
   background-color: var(--LightAccentColor);
 }
 main.product   article div table tbody tr td:nth-child(odd) {
-  width: 6.25rem;
+  width: 5rem;
 }
 main.product   article div table.expanded tbody tr td:nth-child(odd) {
-  width: 7.5rem;
+  width: 6.25rem;
 }
 main.product   article div table tfoot tr {
   border-bottom: 1px solid var(--LightAccentColor);
 }
-
 main.product   article aside {
   display: flex;
   justify-content: center;
   align-content: center;
-  width: calc(50% - .75rem);
+  width: calc(50% - .6rem);
   height: auto;
   max-height: 40vh;
   background-color: var(--LightAccentColor);
@@ -246,7 +242,7 @@ main.product   article aside img {
 
 footer {
   border-top: 1px solid var(--LightAccentColor);
-  padding: 1.2rem 0 1rem 0;
+  padding: 1rem 0;
   margin-top: .4rem;
   display: flex;
   justify-content: center;
@@ -275,10 +271,13 @@ h2, h3 {
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  font-size: .833rem;
+  font-size: .694rem;
   text-transform: uppercase;
   font-family: var(--SecondaryFont);
   line-height: 1;
+}
+p {
+  font-size: .833rem;
 }
 
 p:not(:first-child):not(:last-child) {
@@ -305,8 +304,8 @@ main.product article table tfoot {
   font-family: var(--SecondaryFont);
 }
 main.product article table {
-  font-size: .694rem;
   text-transform: uppercase;
+  font-size: .579rem;
 }
 main.product article table tfoot {
   text-decoration: none;
@@ -320,7 +319,7 @@ footer a,
 footer small {
   padding: .25rem .5rem 0rem .5rem;
   margin: 0 .3rem;
-  font-size: .694rem;
+  font-size: .579rem;
   text-transform: uppercase;
   font-style: italic;
   font-family: var(--SecondaryFont);
@@ -330,7 +329,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
+main.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* ANIMATION and LIGHTBOX */
 img {
@@ -339,7 +342,7 @@ img {
   background-color: var(--LightAccentColor);
   transition-delay: filter .2s;
 
-  font-size: .694rem;
+  font-size: .579rem;
   font-family: var(--SecondaryFont);
 
   -webkit-user-select: none;
@@ -369,6 +372,7 @@ figure {
 figure img {
   align-self: center;
   max-width: 75%;
+  max-width: min(75%, 60rem);
   max-height: 75%;
   cursor: default;
   filter: grayscale(0) brightness(1);
@@ -443,7 +447,7 @@ figure img {
 @media screen and (max-width: 48rem) {
 
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   main.catalogue section {
@@ -464,7 +468,7 @@ figure img {
     text-decoration: underline;
   }
   main.product article div table tfoot tr {
-    padding: .75rem 0 0 0;
+    padding: .75rem 0 .75rem 0;
     border: none;
   }
 
@@ -472,8 +476,8 @@ figure img {
     background-color: transparent;
   }
   footer {
-    padding: 1rem 0 .75rem 0;
-    margin-top: 0rem;
+    padding: 1rem 0;
+    margin-top: 0;
   }
   figure {
     display: none;
