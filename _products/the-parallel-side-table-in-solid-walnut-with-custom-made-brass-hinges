@@ -1,0 +1,46 @@
+---
+layout: products
+
+nav_target: "/index.html"
+
+number: 6
+
+title: 'The Parallel Side Table in Solid Walnut with Custom Made Brass Hinges'
+
+description: '
+
+<small>Finish as Shown: Dark Walnut and Natural Brass</small>'
+
+table_expanded: 'expanded'
+
+dimensions:
+- dimension:    LARGE
+  value:
+- dimension:    -- Point to Point
+  value:          19″
+- dimension:    -- Height
+  value:          25 1/8″
+- dimension:    MEDIUM
+  value:
+- dimension:    -- Point to Point
+  value:          17.5″
+- dimension:    -- Depth
+  value:          16″
+- dimension:    -- Height
+  value:          22″
+- dimension:    SMALL
+  value:
+- dimension:    -- Point to Point
+  value:          13″
+- dimension:    -- Height
+  value:          19.5″
+
+images:
+- "/images/the-parallel-side-table-in-solid-walnut-with-custom-made-brass-hinges-1.jpg"
+- "/images/the-parallel-side-table-in-solid-walnut-with-custom-made-brass-hinges-2.jpg"
+- "/images/the-parallel-side-table-in-solid-walnut-with-custom-made-brass-hinges-3.jpg"
+- "/images/the-parallel-side-table-in-solid-walnut-with-custom-made-brass-hinges-4.jpg"
+
+tearsheet:
+- "/tearsheets/the-parallel-side-table-in-solid-walnut-with-custom-made-brass-hinges.pdf"
+---

@@ -296,12 +296,17 @@ main.product article p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-style: italic;
 }
 main.product article p,
 main.product article table tbody,
 main.product article table tfoot {
   font-family: var(--SecondaryFont);
+}
+main.product article p small {
+  margin-top: .5rem;
+  font-style: normal;
+  font-size: .579rem;
+  font-style: italic;
 }
 main.product article table {
   text-transform: uppercase;
@@ -425,6 +430,10 @@ figure img {
     margin-bottom: .75rem;
   }
 
+  main.product   article p {
+    max-width: 36rem;
+  }
+
   main.product   article div {
     width: 100%;
   }
@@ -460,6 +469,9 @@ figure img {
 
   main.catalogue article {
     column-count: 1;
+  }
+  main.product article p {
+    max-width: 100%;
   }
   main.product article div table tbody {
     display: none;
