@@ -5,7 +5,7 @@ permalink: /:title/
 collections:
   products:
     output: true
-    sort_by: ["number", "letter"]
+    sort_by: ["number"]
 
 # Build settings
 theme: minima
